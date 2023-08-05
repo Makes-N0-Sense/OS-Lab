@@ -17,7 +17,7 @@ void main(){
 	
 	printf("\nProcesses: ");
 	for(i=0;i<n;i++){
-		printf("%d ",pro_arr[i]);
+		printf("P%d ",pro_arr[i]);
 	}
 	
 	printf("\nBurst Times: ");

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int mutex = 1, full = 0 , empty = 10 , x = 0;
+int mutex = 1, full = 0 , empty = 5 , x = 0;
 
 void producer(){
     mutex = 0;
@@ -8,12 +8,14 @@ void producer(){
     empty = empty - 1;
     x = x+1;
     mutex = 1;
+    printf("Producer Produced An Item %d\n",x);
 }
 
 void consumer(){
     mutex = 0;
     full = full - 1;
     empty = empty + 1;
+    printf("Consumer Consumed An Item %d\n",x);
     x = x - 1;
     mutex = 1;
 }
