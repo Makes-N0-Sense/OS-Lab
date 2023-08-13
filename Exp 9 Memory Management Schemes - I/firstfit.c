@@ -4,7 +4,6 @@ void main(){
 	
 	struct block{
 		int size;
-		int allot[10];
 	}B[20];
 	
 	struct process{
@@ -30,8 +29,6 @@ void main(){
 	for(i=0;i<pno;i++){
 		for(j=0;j<bno;j++){
 			if(P[i].size<=B[j].size && P[i].flag != 1){
-				B[j].allot[a]=i;
-				a++;
 				B[j].size = B[j].size - P[i].size;
 				P[i].flag = 1;
 				printf("Process %d is Allocated to Block %d\n",i,j);
